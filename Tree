@@ -1,0 +1,19 @@
+4. TREE (Binary Tree)
+
+
+class TreeNode:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
+class BinaryTree:
+    def __init__(self, root_value):
+        self.root = TreeNode(root_value)
+
+    def inorder(self, node):
+        if node:
+            self.inorder(node.left)
+            print(node.value, end=" ")
+            self.inorder(node.right)
