@@ -1,0 +1,24 @@
+
+
+class Array:
+    def __init__(self):
+        self.array = []
+
+    # Add element
+    def add(self, value):
+        self.array.append(value)
+
+    # Remove element
+    def remove(self, value):
+        if value in self.array:
+            self.array.remove(value)
+
+    # Get element by index
+    def get(self, index):
+        if 0 <= index < len(self.array):
+            return self.array[index]
+        return "Index out of range"
+
+    # Display array
+    def display(self):
+        print(self.array)
